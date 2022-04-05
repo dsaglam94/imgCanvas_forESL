@@ -13,6 +13,45 @@
     <title>Canvas ESL Teaching</title>
 </head>
 <body>
-    
+    <main class="main">
+        <h1 class="main__title">Upload your image and start drawing!</h1>
+        <label for="file-upload" class="file-label">
+            <input id="file-upload" class="file-input" type="file" accept="jpg, png, jpeg"> 
+            <i class="fas fa-long-arrow-alt-left"></i> Choose an image!
+        </label>
+        <div class="main__image--container">
+            <canvas class="canvas">
+
+            </canvas>
+        </div>
+        <div class="main__tools--container">
+            <div class="pen--container">
+                <label for="pen_range">pen width</label>
+                <input id="pen_range" type="range">
+            </div>
+            <div class="colors--container">
+                <button aria-label="changes the pen's color as 'white'" onclick="colorChange('#fff')" style="background-color: #fff;"></button>
+                <button aria-label="changes the pen's color as 'black'" onclick="colorChange('#000')" style="background-color: #000;"></button>
+                <button aria-label="changes the pen's color as 'blue'" onclick="colorChange('blue')" style="background-color: blue;"></button>
+                <button aria-label="changes the pen's color as 'red'" onclick="colorChange('red')" style="background-color: red;"></button>
+                <button aria-label="changes the pen's color as 'purple'" onclick="colorChange('purple')" style="background-color: purple;"></button>
+            </div>
+            <div class="tools--container">
+                <button aria-label="Undos the last drawing" class="undo">
+                    <i class="fas fa-undo"></i>
+                </button>
+                <button aria-label="clears all the drawings" class="clear">
+                    <i class="fas fa-trash"></i>
+                </button>
+                <button aria-label="opens the dice interface" class="dice">
+                    <i class="fas fa-dice"></i>
+                </button>
+                <button aria-label="changes the theme of the page" class="theme">
+                    <i class="fas fa-adjust"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Dice interface -->
+    </main>
 </body>
 </html>
