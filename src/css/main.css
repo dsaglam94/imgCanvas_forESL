@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 *,
 *::before,
 *::after {
@@ -19,6 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
 }
 
 ul {
@@ -107,8 +109,6 @@ button {
   align-items: center;
   justify-content: space-around;
   background: #222;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
   color: #fff;
 }
 .main__tools--container .pen--container {
@@ -160,10 +160,12 @@ button {
 }
 .main .dice__container {
   background: #ccc;
+  border: 5px solid #222;
   border-radius: 0.5rem;
   position: absolute;
   z-index: 100;
-  width: 40%;
+  max-width: 400px;
+  width: 70%;
   display: none;
   flex-direction: column;
   align-items: center;
@@ -186,8 +188,9 @@ button {
   gap: 1rem;
 }
 .main .dice__container .dice__buttons .dice__close--btn {
+  color: #222;
   font-size: 0.8rem;
-  border: 1px solid #222;
+  border: 2px solid #222;
   padding: 0.3em 3em;
   border-radius: 0.5rem;
 }
