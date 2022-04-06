@@ -167,8 +167,8 @@ button {
   display: none;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
-  padding-block: 4em;
+  gap: 2rem;
+  padding-block: 3em;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -179,16 +179,35 @@ button {
 .main .dice__container .dice__img {
   width: 150px;
 }
-.main .dice__container .dice__button {
+.main .dice__container .dice__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.main .dice__container .dice__buttons .dice__close--btn {
+  font-size: 0.8rem;
+  border: 1px solid #222;
+  padding: 0.3em 3em;
+  border-radius: 0.5rem;
+}
+.main .dice__container .dice__buttons .dice__close--btn:hover, .main .dice__container .dice__buttons .dice__close--btn:focus {
+  color: red;
+  transform: scaleX(1.1);
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.75);
+}
+.main .dice__container .dice__buttons .dice__roll--btn {
   background-color: #222;
   text-transform: uppercase;
+  font-size: 1rem;
   letter-spacing: 2px;
   padding: 0.5em 4em;
   border-radius: 0.5rem;
 }
-.main .dice__container .dice__button:hover, .main .dice__container .dice__button:focus {
-  scale: 1.1;
+.main .dice__container .dice__buttons .dice__roll--btn:hover, .main .dice__container .dice__buttons .dice__roll--btn:focus {
+  transform: scaleX(1.1);
   color: red;
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.75);
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,6 +1,8 @@
+// File input variables
 const FILEINPUT = document.querySelector('.file-input');
-const CANVAS = document.querySelector('.canvas');
+
 // Variables for canvas function
+const CANVAS = document.querySelector('.canvas');
 let penStrokeWidth = document.querySelector('#pen_range');
 let undoBtn = document.querySelector('.undo');
 let clearBtn = document.querySelector('.clear');
@@ -11,25 +13,25 @@ let imageContainer = document.querySelector('.main__image--container');
 const ctx = CANVAS.getContext('2d');
 
 // listen to recalculate canvas size relative to image container 
-// window.addEventListener('resize', () => {
-//     let canvasWidth = imageContainer.offsetWidth;
-//     let canvasHeight = imageContainer.offsetHeight;
+// window.addEventListener('resize', calcWindowSize);
 
-//     CANVAS.width = canvasWidth;
-//     CANVAS.height = canvasHeight;
-// });
+// function calcWindowSize() {
+
+//     imageContainer.offsetHeight;
+
+//     imageContainer.offsetWidth;
+// }
+
 
 let canvasWidth = imageContainer.offsetWidth;
 let canvasHeight = imageContainer.offsetHeight;
 
 CANVAS.width = canvasWidth;
 CANVAS.height = canvasHeight;
-
+// console.log(calcWindowSize())
 
 // Draw on the canvas
 // Calculate the mouse posiiton relative to canvas
-
-
 function colorChange (data) {
     color = data;
 }
@@ -114,45 +116,82 @@ FILEINPUT.addEventListener('change', function () {
 });
 
 
-// dice function
-
+// DICE FUNCTION
+// Dice variables 
+let closeBtn = document.querySelector('.dice__close--btn');
+let rollBtn = document.querySelector('.dice__roll--btn');
+let diceContainer = document.querySelector('.dice__container');
 let diceImg = document.querySelector('.dice__img');
-
+let isDiceOpen = false;
+// opens the dice interface
 diceBtn.addEventListener('click', () => {
-
-    let diceContainer = document.querySelector('.dice__container');
 
     if(!diceContainer.classList.contains('dice-show')) {
         diceContainer.classList.add('dice-show');
+        isDiceOpen = true;
     } else if (diceContainer.classList.contains('dice-show')) {
-        diceContainer.classList.remove('dice-show')
+        diceContainer.classList.remove('dice-show');
+        isDiceOpen = false;
     }
-
 })
 
-let rollBtn = document.querySelector('.dice__button');
+closeBtn.addEventListener('click', () => {
+    if(!isDiceOpen) {
+        return;
+    } else if (isDiceOpen = true) {
+        diceContainer.classList.remove('dice-show');
+        isDiceOpen = false;
+    }
+})
 
+
+
+// ROLLS THE DICE
 rollBtn.addEventListener('click', ()=> {
+    let dice = new Audio('./sounds/dice-sound.mp3');
+    dice.playbackRate = 2.5;
+    dice.play();
 
-    let randomNum = Math.floor((Math.random() * 6) + 1);
-    showDicePics ();
-    showDicePics ();
+    setTimeout(() => {
+        randomNumber();
+    }, 100);
+    setTimeout(() => {
+        randomNumber();
+    }, 250);
+    setTimeout(() => {
+        randomNumber();
+    }, 350);
+    setTimeout(() => {
+        randomNumber();
+    }, 450);
+    setTimeout(() => {
+        randomNumber();
+    }, 550);
+    setTimeout(() => {
+        randomNumber();
+    }, 650);
+    setTimeout(() => {
+        randomNumber();
+    }, 750);
+    setTimeout(() => {
+        randomNumber();
+    }, 850);
+    setTimeout(() => {
+        randomNumber();
+    }, 950);
 
 })
 
 
-function showDicePics () {
+// Generate a random number and change the images relative the number
+function randomNumber () {
+ 
+    let randomNum = Math.floor((Math.random() * 6) + 1) ;
 
-    for (let i = 1; i <= 6; i++) {
+    let randomDiceImg = `dice${randomNum}.png`
     
-        let randomDiceImg = `dice${i}.png`
-    
-        let randomImgSource = `./images/${randomDiceImg}`
+    let randomImgSource = `./images/${randomDiceImg}`
 
-        diceImg.setAttribute("src", randomImgSource)
-
-        console.log('dices')
-    }
+    return diceImg.setAttribute("src", randomImgSource);
 }
-
 
