@@ -114,6 +114,45 @@ FILEINPUT.addEventListener('change', function () {
 });
 
 
-// here is a new code
+// dice function
+
+let diceImg = document.querySelector('.dice__img');
+
+diceBtn.addEventListener('click', () => {
+
+    let diceContainer = document.querySelector('.dice__container');
+
+    if(!diceContainer.classList.contains('dice-show')) {
+        diceContainer.classList.add('dice-show');
+    } else if (diceContainer.classList.contains('dice-show')) {
+        diceContainer.classList.remove('dice-show')
+    }
+
+})
+
+let rollBtn = document.querySelector('.dice__button');
+
+rollBtn.addEventListener('click', ()=> {
+
+    let randomNum = Math.floor((Math.random() * 6) + 1);
+    showDicePics ();
+    showDicePics ();
+
+})
+
+
+function showDicePics () {
+
+    for (let i = 1; i <= 6; i++) {
+    
+        let randomDiceImg = `dice${i}.png`
+    
+        let randomImgSource = `./images/${randomDiceImg}`
+
+        diceImg.setAttribute("src", randomImgSource)
+
+        console.log('dices')
+    }
+}
 
 

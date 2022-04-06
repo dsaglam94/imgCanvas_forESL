@@ -54,6 +54,7 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  position: relative;
 }
 .main__title {
   text-transform: uppercase;
@@ -155,6 +156,38 @@ button {
 }
 .main__tools--container .tools--container button:hover, .main__tools--container .tools--container button:focus {
   scale: 1.2;
+  color: red;
+}
+.main .dice__container {
+  background: #ccc;
+  border-radius: 0.5rem;
+  position: absolute;
+  z-index: 100;
+  width: 40%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding-block: 4em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .dice__container.dice-show {
+  display: flex;
+}
+.main .dice__container .dice__img {
+  width: 150px;
+}
+.main .dice__container .dice__button {
+  background-color: #222;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.5em 4em;
+  border-radius: 0.5rem;
+}
+.main .dice__container .dice__button:hover, .main .dice__container .dice__button:focus {
+  scale: 1.1;
   color: red;
 }
 
