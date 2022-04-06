@@ -1,5 +1,9 @@
 @import 'config';
 
+// Variables 
+
+$ff__body : 'Roboto', sans-serif;
+
 *, 
 *::before, 
 *::after {
@@ -21,6 +25,7 @@ body {
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    font-family: $ff__body;
 }
 
 ul {
@@ -116,8 +121,6 @@ button {
         align-items: center;
         justify-content: space-around;
         background: #222;
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
         color: #fff;
 
         & .pen--container {
@@ -182,10 +185,12 @@ button {
     // dice container starts here
     .dice__container {
         background: #ccc;
+        border: 5px solid #222;
         border-radius: .5rem;
         position: absolute;
         z-index: 100;
-        width: 40%;
+        max-width: 400px;
+        width: 70%;
         display: none;
         flex-direction: column;
         align-items: center;
@@ -210,8 +215,9 @@ button {
             gap: 1rem;
 
             .dice__close--btn {
+                color: #222;
                 font-size: .8rem;
-                border: 1px solid #222;
+                border: 2px solid #222;
                 padding: .3em 3em;
                 border-radius: .5rem;
 
