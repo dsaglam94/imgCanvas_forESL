@@ -14,17 +14,30 @@ Many different options exist on web that are made by other people. But they are 
 
 > So this project came into life from this particular need.
 
-It has very basic interface and it is simple.
+It has very basic interface and it is too simple.
 
 User can :
 
-- add and see an image;
+- upload and see the image;
 - draw on the image;
 - clear or undo the drawings;
 - roll a dice to decide the next move;
 
-### Tech stacked used 
+## Accessibility 
+
+- The page is fully accessible by "TAB" key and can be controlled by "arrow" keys
+- Buttons have `aria-label` to explain what it does
+
+### Tech stacks used 
 
 - HTML
 - SASS
 - JavaScript
+
+### What's next ?
+
+As I use this project with my students, I might update or develop the project according to our needs. 
+
+#### You have recommendations or feedback?
+
+Feel free to reach me and tell me your ideas.
