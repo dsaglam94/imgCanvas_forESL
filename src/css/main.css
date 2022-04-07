@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 :root {
   --clr-primary: #FAF8FF;
-  --clr-secondary: #222;
+  --clr-secondary: #383645;
   --clr-accent: #8685EF;
 }
 
@@ -173,8 +173,7 @@ button {
   color: var(--clr-accent);
 }
 .main .dice__container {
-  background: #222;
-  border: 5px solid #383645;
+  background: #3c3838;
   border-radius: 0.5rem;
   position: absolute;
   z-index: 100;
@@ -206,6 +205,7 @@ button {
   gap: 1rem;
 }
 .main .dice__container .dice__buttons .dice__close--btn {
+  color: #FAF8FF;
   font-size: 0.8rem;
   border: 2px solid #FAF8FF;
   padding: 0.3em 3em;
@@ -217,6 +217,7 @@ button {
   box-shadow: -2px -2px 16px -8px rgba(255, 255, 255, 0.75), 2px 2px 16px -8px rgba(255, 255, 255, 0.75);
 }
 .main .dice__container .dice__buttons .dice__roll--btn {
+  color: #FAF8FF;
   background-color: #8685EF;
   text-transform: uppercase;
   font-size: 1rem;
