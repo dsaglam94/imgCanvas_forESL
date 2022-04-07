@@ -192,3 +192,31 @@ function randomNumber () {
     return diceImg.setAttribute("src", randomImgSource);
 }
 
+// LOCAL STORAGE AND DARK MODE
+let darkMode = localStorage.getItem('darkMode');
+let colorWhiteBtn = document.querySelector('.clr__white--btn');
+
+const enableDarkMode = () => {
+    document.body.classList.add('dark-mode');
+    colorWhiteBtn.classList.add('clr__white--btn-darkMode');
+    localStorage.setItem('darkMode', 'enabled');
+}
+
+const disableDarkMode = () => {
+    document.body.classList.remove('dark-mode');
+    colorWhiteBtn.classList.remove('clr__white--btn-darkMode');
+    localStorage.setItem('darkMode', null);
+}
+
+if(darkMode === 'enabled') {
+    enableDarkMode();
+}
+
+themeBtn.addEventListener('click', () => {
+    darkMode = localStorage.getItem('darkMode');
+    if(darkMode !== 'enabled') {
+        enableDarkMode();
+    } else {
+        disableDarkMode();
+    }
+})

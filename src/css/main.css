@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+:root {
+  --clr-primary: #FAF8FF;
+  --clr-secondary: #222;
+  --clr-accent: #8685EF;
+}
+
+.dark-mode {
+  --clr-primary: #222;
+  --clr-secondary: #FAF8FF;
+  --clr-accent: #8685EF;
+}
+
 *,
 *::before,
 *::after {
@@ -45,10 +57,11 @@ button {
   background-color: transparent;
   outline: none;
   border: none;
-  color: #fff;
+  color: var(--clr-primary);
 }
 
 .main {
+  background-color: var(--clr-primary);
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -59,10 +72,12 @@ button {
   position: relative;
 }
 .main__title {
+  color: var(--clr-secondary);
   text-transform: uppercase;
   padding-block: 0.5em;
 }
 .main .file-label {
+  color: var(--clr-secondary);
   width: 1100px;
   max-width: 100%;
   display: flex;
@@ -91,7 +106,7 @@ button {
   width: 1100px;
   max-width: 100%;
   flex-grow: 1;
-  border: 2px solid black;
+  border: 2px solid var(--clr-secondary);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -108,8 +123,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: #222;
-  color: #fff;
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
 }
 .main__tools--container .pen--container {
   width: 30%;
@@ -139,10 +154,9 @@ button {
 }
 .main__tools--container .colors--container > *:hover, .main__tools--container .colors--container > *:focus {
   scale: 1.2;
-  border: 1px solid #fff;
 }
-.main__tools--container .colors--container button:first-of-type:hover, .main__tools--container .colors--container button:first-of-type:focus {
-  border: 1px solid red;
+.main__tools--container .colors--container .clr__white--btn-darkMode {
+  border: 1px solid var(--clr-accent);
 }
 .main__tools--container .tools--container {
   width: 30%;
@@ -156,24 +170,28 @@ button {
 }
 .main__tools--container .tools--container button:hover, .main__tools--container .tools--container button:focus {
   scale: 1.2;
-  color: red;
+  color: var(--clr-accent);
 }
 .main .dice__container {
-  background: #ccc;
-  border: 5px solid #222;
+  background: #222;
+  border: 5px solid #383645;
   border-radius: 0.5rem;
   position: absolute;
   z-index: 100;
-  max-width: 400px;
+  max-width: 500px;
   width: 70%;
   display: none;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   padding-block: 3em;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.main .dice__container .dice__title {
+  color: #FAF8FF;
+  font-size: 2rem;
 }
 .main .dice__container.dice-show {
   display: flex;
@@ -188,19 +206,18 @@ button {
   gap: 1rem;
 }
 .main .dice__container .dice__buttons .dice__close--btn {
-  color: #222;
   font-size: 0.8rem;
-  border: 2px solid #222;
+  border: 2px solid #FAF8FF;
   padding: 0.3em 3em;
   border-radius: 0.5rem;
 }
 .main .dice__container .dice__buttons .dice__close--btn:hover, .main .dice__container .dice__buttons .dice__close--btn:focus {
-  color: red;
+  color: var(--clr-accent);
   transform: scaleX(1.1);
-  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px -2px 16px -8px rgba(255, 255, 255, 0.75), 2px 2px 16px -8px rgba(255, 255, 255, 0.75);
 }
 .main .dice__container .dice__buttons .dice__roll--btn {
-  background-color: #222;
+  background-color: #8685EF;
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 2px;
@@ -209,8 +226,7 @@ button {
 }
 .main .dice__container .dice__buttons .dice__roll--btn:hover, .main .dice__container .dice__buttons .dice__roll--btn:focus {
   transform: scaleX(1.1);
-  color: red;
-  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px -2px 16px -8px rgba(255, 255, 255, 0.75), 2px 2px 16px -8px rgba(255, 255, 255, 0.75);
 }
 
 /*# sourceMappingURL=main.css.map */
