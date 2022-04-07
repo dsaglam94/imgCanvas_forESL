@@ -148,7 +148,7 @@ closeBtn.addEventListener('click', () => {
 rollBtn.addEventListener('click', ()=> {
    
     audio.play()
-    let dice = new Audio('/src/sounds/dice-sound.mp3');
+    let dice = new Audio('../sounds/dice-sound.mp3');
     dice.playbackRate = 2.5;
     dice.play();
 
