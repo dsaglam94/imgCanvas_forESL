@@ -146,8 +146,12 @@ closeBtn.addEventListener('click', () => {
 
 // ROLLS THE DICE
 rollBtn.addEventListener('click', ()=> {
-    let dice = new Audio('../src/sounds/dice-sound.mp3');
-    dice.playbackRate = 2.5;
+    
+    import sound from '../src/sounds/dice-sound.mp3'
+    const audio = new Audio(sound)
+    audio.play()
+//     let dice = new Audio('../src/sounds/dice-sound.mp3');
+//     dice.playbackRate = 2.5;
     dice.play();
 
     setTimeout(() => {
