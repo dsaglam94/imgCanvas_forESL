@@ -1,6 +1,7 @@
 @import 'config';
 @import 'menu-toggle';
 @import 'header';
+@import 'questions';
 
 // Variables 
 
@@ -75,24 +76,17 @@ button {
 
 .main {
     background-image: var(--clr-bg-light);
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    position: relative;
+    
 
-    .questions {
-        margin-block: auto;
+    .canvas--container {
+        min-height: 100vh;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        min-height: 100vh;
-        width: 100%;
-
+        justify-content: space-between;
+        gap: 1rem;
+        position: relative;
     }
 
     &__title {
