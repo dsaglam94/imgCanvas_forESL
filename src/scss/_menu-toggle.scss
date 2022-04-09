@@ -6,9 +6,20 @@
     width: 20%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+
+        .menu--text {
+            color: var(--clr-primary);
+            text-transform: uppercase;
+            font-size: .7rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            z-index: 1000;
+            margin-left: 1em;
+        }
 
         .menu-toggle {
+            margin-left: 3em;
             background-color: transparent;
             width: 40px;
             height: 30px;
