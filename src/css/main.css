@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-.menu-toggle {
+.menu--container {
+  height: 7vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu--container .menu-toggle {
   background-color: transparent;
   width: 40px;
   height: 30px;
@@ -11,10 +21,10 @@
   cursor: pointer;
   overflow: hidden;
 }
-.menu-toggle:hover span, .menu-toggle:focus span {
+.menu--container .menu-toggle:hover span, .menu--container .menu-toggle:focus span {
   background-color: var(--clr-accent);
 }
-.menu-toggle span {
+.menu--container .menu-toggle span {
   position: absolute;
   border-radius: 5px;
   width: 30px;
@@ -22,25 +32,25 @@
   background-color: var(--clr-primary);
   transition: 0.5s;
 }
-.menu-toggle.active span:nth-child(3) {
+.menu--container .menu-toggle.active span:nth-child(3) {
   transform: translateX(50px);
 }
-.menu-toggle span:nth-child(1) {
+.menu--container .menu-toggle span:nth-child(1) {
   transform: translateY(-8px);
   width: 15px;
   left: 5px;
   transition-delay: 0.125s;
 }
-.menu-toggle.active span:nth-child(1) {
+.menu--container .menu-toggle.active span:nth-child(1) {
   transform: translateY(0) rotate(45deg);
   width: 30px;
 }
-.menu-toggle span:nth-child(2) {
+.menu--container .menu-toggle span:nth-child(2) {
   transform: translateY(8px);
   width: 20px;
   left: 5px;
 }
-.menu-toggle.active span:nth-child(2) {
+.menu--container .menu-toggle.active span:nth-child(2) {
   transform: translateY(0) rotate(315deg);
   width: 30px;
   transition-delay: 0.25s;
@@ -76,6 +86,9 @@
   text-decoration: none;
 }
 .header .nav__list--links:hover {
+  color: var(--clr-accent);
+}
+.header .active-link {
   color: var(--clr-accent);
 }
 
@@ -153,6 +166,15 @@ button {
   gap: 1rem;
   position: relative;
 }
+.main .questions {
+  margin-block: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+  width: 100%;
+}
 .main__title {
   font-size: 1.5rem;
   color: var(--clr-secondary);
@@ -208,7 +230,8 @@ button {
   height: 7vh;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 2rem;
   background-color: var(--clr-secondary);
   color: var(--clr-primary);
 }
