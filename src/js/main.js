@@ -10,7 +10,34 @@ let diceBtn = document.querySelector('.dice');
 let themeBtn = document.querySelector('.theme');
 let imageContainer = document.querySelector('.main__image--container');
 
+// variables for menuToggle 
+const menuBtn = document.querySelector('.menu-toggle');
+const header = document.querySelector('.header');
+
+// Burger menu function
+let isHeaderOpen = false;
+menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('active');
+    if(!isHeaderOpen) {
+        header.style.left = '0'
+        isHeaderOpen = true;
+    } else if (isHeaderOpen) {
+        header.style.left = '-500px'
+        isHeaderOpen = false;
+    }
+})
+
 const ctx = CANVAS.getContext('2d');
+
+    // window.addEventListener('resize', function(e) {
+
+    //     let canvasWidth = imageContainer.offsetWidth;
+    //     let canvasHeight = imageContainer.offsetHeight;
+
+    //     // return { canvasWidth, canvasHeight }
+    //     console.log(canvasWidth, canvasHeight)
+    // });
+
 
     let canvasWidth = imageContainer.offsetWidth;
     let canvasHeight = imageContainer.offsetHeight;
