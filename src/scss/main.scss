@@ -8,12 +8,18 @@ $ff__body : 'Roboto', sans-serif;
     --clr-primary: #FAF8FF;
     --clr-secondary: #383645;
     --clr-accent: #8685EF;
+
+    --clr-bg-light: linear-gradient(to right top, #4600ff, #0085ff, #00b9ff, #00e0dc, #00ff96);
+    
 }
 
 .dark-mode {
     --clr-primary: #222;
     --clr-secondary: #FAF8FF;
     --clr-accent: #8685EF;
+
+    --clr-bg-light: linear-gradient(to top, #f334d3, #ca3ad7, #9e3fd7, #6a42d3, #0d43cb);
+
 }
 
 *, 
@@ -66,7 +72,8 @@ button {
 }
 
 .main {
-    background-color: var(--clr-primary);
+    // background-color: var(--clr-primary);
+    background-image: var(--clr-bg-light);
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -77,6 +84,7 @@ button {
     position: relative;
 
     &__title {
+        font-size: 1.5rem;
         color: var(--clr-secondary);
         text-transform: uppercase;
         padding-block: .5em;
@@ -234,15 +242,14 @@ button {
             .dice__close--btn {
                 color: #FAF8FF;
                 font-size: .8rem;
-                border: 2px solid #FAF8FF;
                 padding: .3em 3em;
                 border-radius: .5rem;
 
                 &:hover,
                 &:focus {
                     color: var(--clr-accent);
-                    transform: scaleX(1.1);
-                    box-shadow: -2px -2px 16px -8px rgba(255,255,255,0.75), 2px 2px 16px -8px rgba(255,255,255,0.75);
+                    transform: scaleX(0.9);
+                    box-shadow: -1px -1px 6px -50px rgba(255,255,255,0.75), 1px 1px 2px 0px rgba(255,255,255,0.75);
                 }
             }
 
@@ -257,9 +264,9 @@ button {
     
                 &:hover,
                 &:focus {
-                    transform: scaleX(1.1);
+                    transform: scale(0.95);
                     // color: var(--clr-accent);
-                    box-shadow: -2px -2px 16px -8px rgba(255,255,255,0.75), 2px 2px 16px -8px rgba(255,255,255,0.75);;
+                    box-shadow: inset 2px 2px 5px 0px rgba(0,0,0,0.75), inset -2px -2px 5px 0px rgba(255,255,255,0.75);
                 }
             }
         }        
