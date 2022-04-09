@@ -146,7 +146,7 @@ closeBtn.addEventListener('click', () => {
 
 // ROLLS THE DICE
 rollBtn.addEventListener('click', ()=> {
-    let dice = new Audio('./sounds/dice-sound.mp3');
+    let dice = new Audio('dice-sound.mp3');
     dice.playbackRate = 2.5;
     dice.play();
 
@@ -187,7 +187,7 @@ function randomNumber () {
 
     let randomDiceImg = `dice${randomNum}.png`
     
-    let randomImgSource = `./images/${randomDiceImg}`
+    let randomImgSource = `./src/images/${randomDiceImg}`
 
     return diceImg.setAttribute("src", randomImgSource);
 }
