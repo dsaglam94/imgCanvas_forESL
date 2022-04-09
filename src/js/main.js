@@ -12,23 +12,12 @@ let imageContainer = document.querySelector('.main__image--container');
 
 const ctx = CANVAS.getContext('2d');
 
-// listen to recalculate canvas size relative to image container 
-// window.addEventListener('resize', calcWindowSize);
-
-// function calcWindowSize() {
-
-//     imageContainer.offsetHeight;
-
-//     imageContainer.offsetWidth;
-// }
+    let canvasWidth = imageContainer.offsetWidth;
+    let canvasHeight = imageContainer.offsetHeight;
 
 
-let canvasWidth = imageContainer.offsetWidth;
-let canvasHeight = imageContainer.offsetHeight;
-
-CANVAS.width = canvasWidth;
-CANVAS.height = canvasHeight;
-// console.log(calcWindowSize())
+    CANVAS.width = canvasWidth;
+    CANVAS.height = canvasHeight;
 
 // Draw on the canvas
 // Calculate the mouse posiiton relative to canvas
@@ -95,8 +84,11 @@ window.addEventListener('load', () => {
 
 
     CANVAS.addEventListener('mousedown', startPosition);
+    CANVAS.addEventListener('touchstart', startPosition);
     CANVAS.addEventListener('mouseup', endPosition);
+    CANVAS.addEventListener('touchend', endPosition);
     CANVAS.addEventListener('mousemove', paint);
+    CANVAS.addEventListener('touchmove', paint);
     CANVAS.addEventListener('mouseout', endPosition);
 
     clearBtn.addEventListener('click', clear);
@@ -146,7 +138,8 @@ closeBtn.addEventListener('click', () => {
 
 // ROLLS THE DICE
 rollBtn.addEventListener('click', ()=> {
-    let dice = new Audio('dice-sound.mp3');
+  
+    let dice = new Audio('./src/sounds/dice-sound.mp3');
     dice.playbackRate = 2.5;
     dice.play();
 
