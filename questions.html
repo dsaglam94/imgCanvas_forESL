@@ -33,7 +33,7 @@
     <script src="https://kit.fontawesome.com/be05affc2e.js" crossorigin="anonymous"></script>
     <!-- JS link -->
     <script src="./src/js/main.js" defer></script>
-    <title>ESL Teaching | Canvas</title>
+    <title>ESL Teaching | Funny Questions</title>
 </head>
 <body>
 
@@ -41,10 +41,10 @@
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__list--items">
-                    <a class="nav__list--links active-link" href="index.html">canvas</a>
+                    <a class="nav__list--links" href="index.html">canvas</a>
                 </li>
                 <li class="nav__list--items">
-                    <a class="nav__list--links" href="questions.html">questions</a>
+                    <a class="nav__list--links active-link" href="questions.html">questions</a>
                 </li>
                 <li class="nav__list--items">
                     <a class="nav__list--links" href="#">Home</a>
@@ -57,53 +57,21 @@
     </header>
 
     <main class="main">
-        <label for="file-upload" class="file-label">
-            <input id="file-upload" class="file-input" type="file"> 
-            <i class="fas fa-long-arrow-alt-left"></i> Choose an image and start drawing!
-        </label>
-        <div class="main__image--container">
-            <canvas class="canvas">
-
-            </canvas>
-        </div>
-        <div class="main__tools--container">
-            <div class="pen--container">
-                <label for="pen_range">pen width</label>
-                <input id="pen_range" type="range">
-            </div>
-            <div class="colors--container">
-                <button class="clr__white--btn" aria-label="changes the pen's color as 'white'" onclick="colorChange('#fff')" style="background-color: #fff;"></button>
-                <button aria-label="changes the pen's color as 'black'" onclick="colorChange('#000')" style="background-color: #000;"></button>
-                <button aria-label="changes the pen's color as 'blue'" onclick="colorChange('blue')" style="background-color: blue;"></button>
-                <button aria-label="changes the pen's color as 'red'" onclick="colorChange('red')" style="background-color: red;"></button>
-                <button aria-label="changes the pen's color as 'purple'" onclick="colorChange('purple')" style="background-color: purple;"></button>
-            </div>
-            <div class="tools--container">
-                <button aria-label="Undos the last drawing" class="undo">
-                    <i class="fas fa-undo"></i>
-                </button>
-                <button aria-label="clears all the drawings" class="clear">
-                    <i class="fas fa-trash"></i>
-                </button>
-                <button aria-label="opens the dice interface" class="dice">
-                    <i class="fas fa-dice"></i>
-                </button>
-                <button aria-label="changes the theme of the page" class="theme">
-                    <i class="fas fa-adjust"></i>
-                </button>
-            </div>
-        </div>
-        <!-- Dice interface -->
-        <div class="dice__container">
-            <h2 class="dice__title">
-                You feel lucky? 🥳
-            </h2>
-            <img src="./src/images/dice1.png" alt="dice image" class="dice__img">
-            <div class="dice__buttons">
-                <button class="dice__roll--btn">Roll</button>
-                <button class="dice__close--btn">Close</button>
-            </div>
-        </div>
+            <section class="questions">
+                <h1 class="questions__title">
+                    Are you ready for the question?
+                </h1>
+                <div class="questions__cards">
+                    <div class="questions__cards--question">
+                        <p>question</p>
+                        <button>get question</button>
+                    </div>
+                    <div class="questions__cards--answer">
+                        <p>question</p>
+                        <button>get question</button>
+                    </div>
+                </div>
+            </section>
         <!-- Menu -->
         <div class="menu--container">
             <button aria-label="Menu button" class="menu-toggle">

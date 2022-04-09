@@ -1,54 +1,66 @@
-    .menu-toggle {
-        background-color: transparent;
-        width: 40px;
-        height: 30px;
-        position: relative;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        overflow: hidden;
+.menu--container {
+    height: 7vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        &:hover span,
-        &:focus span {
-            background-color: var(--clr-accent);
+        .menu-toggle {
+            background-color: transparent;
+            width: 40px;
+            height: 30px;
+            position: relative;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            overflow: hidden;
+    
+            &:hover span,
+            &:focus span {
+                background-color: var(--clr-accent);
+            }
+    
+            & span {
+                position: absolute;
+                border-radius: 5px;
+                width: 30px;
+                height: 3px;
+                background-color: var(--clr-primary);
+                transition: .5s;
+            }
+    
+            &.active span:nth-child(3) {
+                transform: translateX(50px);
+            }
+    
+            & span:nth-child(1) {
+                transform: translateY(-8px);
+                width: 15px;
+                left: 5px;
+                transition-delay: .125s;
+            }
+    
+            &.active span:nth-child(1) {
+                transform: translateY(0) rotate(45deg);
+                width: 30px;
+            }
+    
+            & span:nth-child(2) {
+                transform: translateY(8px);
+                width: 20px;
+                left: 5px;
+            }
+    
+            &.active span:nth-child(2) {
+                transform: translateY(0) rotate(315deg);
+                width: 30px;
+                transition-delay: .25s;
+            }
         }
-
-        & span {
-            position: absolute;
-            border-radius: 5px;
-            width: 30px;
-            height: 3px;
-            background-color: var(--clr-primary);
-            transition: .5s;
-        }
-
-        &.active span:nth-child(3) {
-            transform: translateX(50px);
-        }
-
-        & span:nth-child(1) {
-            transform: translateY(-8px);
-            width: 15px;
-            left: 5px;
-            transition-delay: .125s;
-        }
-
-        &.active span:nth-child(1) {
-            transform: translateY(0) rotate(45deg);
-            width: 30px;
-        }
-
-        & span:nth-child(2) {
-            transform: translateY(8px);
-            width: 20px;
-            left: 5px;
-        }
-
-        &.active span:nth-child(2) {
-            transform: translateY(0) rotate(315deg);
-            width: 30px;
-            transition-delay: .25s;
-        }
-    }
+}
+   
