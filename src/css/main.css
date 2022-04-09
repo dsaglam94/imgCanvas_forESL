@@ -1,4 +1,84 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+.menu-toggle {
+  background-color: transparent;
+  width: 40px;
+  height: 30px;
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+.menu-toggle:hover span, .menu-toggle:focus span {
+  background-color: var(--clr-accent);
+}
+.menu-toggle span {
+  position: absolute;
+  border-radius: 5px;
+  width: 30px;
+  height: 3px;
+  background-color: var(--clr-primary);
+  transition: 0.5s;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: translateX(50px);
+}
+.menu-toggle span:nth-child(1) {
+  transform: translateY(-8px);
+  width: 15px;
+  left: 5px;
+  transition-delay: 0.125s;
+}
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+  width: 30px;
+}
+.menu-toggle span:nth-child(2) {
+  transform: translateY(8px);
+  width: 20px;
+  left: 5px;
+}
+.menu-toggle.active span:nth-child(2) {
+  transform: translateY(0) rotate(315deg);
+  width: 30px;
+  transition-delay: 0.25s;
+}
+
+.header {
+  width: 20%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: -500px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-secondary);
+  transition: 0.5s;
+}
+.header .nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.header .nav__list--items {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.header .nav__list--links {
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+.header .nav__list--links:hover {
+  color: var(--clr-accent);
+}
+
 :root {
   --clr-primary: #FAF8FF;
   --clr-secondary: #383645;
@@ -81,17 +161,21 @@ button {
 }
 .main .file-label {
   color: var(--clr-secondary);
-  width: 1100px;
+  width: 900px;
   max-width: 100%;
+  font-size: 1.1rem;
+  font-weight: bold;
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-top: 1em;
   cursor: pointer;
 }
 .main .file-label input {
   font-size: 0.8rem;
 }
 .main .file-label i {
+  margin-left: 1em;
   animation: wiggleLeft 2s linear infinite;
 }
 @keyframes wiggleLeft {
@@ -106,7 +190,7 @@ button {
   }
 }
 .main__image--container {
-  width: 1100px;
+  width: 900px;
   max-width: 100%;
   flex-grow: 1;
   border: 2px solid var(--clr-secondary);
@@ -120,17 +204,16 @@ button {
   inset: 0;
 }
 .main__tools--container {
-  width: 1100px;
-  max-width: 100%;
+  width: 100%;
   height: 7vh;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-color: var(--clr-secondary);
   color: var(--clr-primary);
 }
 .main__tools--container .pen--container {
-  width: 30%;
+  width: 20%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -142,7 +225,7 @@ button {
   font-size: 0.7rem;
 }
 .main__tools--container .colors--container {
-  width: 30%;
+  width: 20%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -162,7 +245,7 @@ button {
   border: 1px solid var(--clr-accent);
 }
 .main__tools--container .tools--container {
-  width: 30%;
+  width: 20%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -215,8 +298,6 @@ button {
 }
 .main .dice__container .dice__buttons .dice__close--btn:hover, .main .dice__container .dice__buttons .dice__close--btn:focus {
   color: var(--clr-accent);
-  transform: scaleX(0.9);
-  box-shadow: -1px -1px 6px -50px rgba(255, 255, 255, 0.75), 1px 1px 2px 0px rgba(255, 255, 255, 0.75);
 }
 .main .dice__container .dice__buttons .dice__roll--btn {
   color: #FAF8FF;

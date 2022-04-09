@@ -36,11 +36,30 @@
     <title>ESL Teaching | Upload an image | Draw on it | Roll the dice</title>
 </head>
 <body>
+
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__list--items">
+                    <a class="nav__list--links" href="#">Home</a>
+                </li>
+                <li class="nav__list--items">
+                    <a class="nav__list--links" href="#">Home</a>
+                </li>
+                <li class="nav__list--items">
+                    <a class="nav__list--links" href="#">Home</a>
+                </li>
+                <li class="nav__list--items">
+                    <a class="nav__list--links" href="#">Home</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
     <main class="main">
-        <h1 class="main__title">Upload your image and start drawing!</h1>
         <label for="file-upload" class="file-label">
             <input id="file-upload" class="file-input" type="file"> 
-            <i class="fas fa-long-arrow-alt-left"></i> Choose an image!
+            <i class="fas fa-long-arrow-alt-left"></i> Choose an image and start drawing!
         </label>
         <div class="main__image--container">
             <canvas class="canvas">
@@ -48,6 +67,13 @@
             </canvas>
         </div>
         <div class="main__tools--container">
+
+                <button aria-label="Menu button" class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
             <div class="pen--container">
                 <label for="pen_range">pen width</label>
                 <input id="pen_range" type="range">

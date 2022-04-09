@@ -1,0 +1,36 @@
+.header {
+    width: 20%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -500px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-secondary);
+    transition: .5s;
+
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        &--items {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        &--links {
+            color: var(--clr-primary);
+            text-decoration: none;
+
+            &:hover {
+                color: var(--clr-accent);
+            }
+        }
+    }
+}
