@@ -69,7 +69,7 @@
   margin-left: 2em;
   z-index: 1000;
 }
-.menu--container .theme:hover {
+.menu--container .theme:hover, .menu--container .theme:focus {
   scale: 1.2;
   color: var(--clr-accent);
 }
