@@ -31,3 +31,31 @@ menuBtn.addEventListener('click', () => {
         isHeaderOpen = false;
     }
 })
+
+let themeBtn = document.querySelector('.theme');
+
+// LOCAL STORAGE AND DARK MODE
+let darkMode = localStorage.getItem('darkMode');
+
+const enableDarkMode = () => {
+    document.body.classList.add('dark-mode');
+    localStorage.setItem('darkMode', 'enabled');
+}
+
+const disableDarkMode = () => {
+    document.body.classList.remove('dark-mode');
+    localStorage.setItem('darkMode', null);
+}
+
+if(darkMode === 'enabled') {
+    enableDarkMode();
+}
+
+themeBtn.addEventListener('click', () => {
+    darkMode = localStorage.getItem('darkMode');
+    if(darkMode !== 'enabled') {
+        enableDarkMode();
+    } else {
+        disableDarkMode();
+    }
+})

@@ -19,7 +19,7 @@
   margin-left: 1em;
 }
 .menu--container .menu-toggle {
-  margin-left: 3em;
+  margin-left: 2em;
   background-color: transparent;
   width: 40px;
   height: 30px;
@@ -64,6 +64,14 @@
   transform: translateY(0) rotate(315deg);
   width: 30px;
   transition-delay: 0.25s;
+}
+.menu--container .theme {
+  margin-left: 2em;
+  z-index: 1000;
+}
+.menu--container .theme:hover {
+  scale: 1.2;
+  color: var(--clr-accent);
 }
 
 .header {
@@ -110,6 +118,7 @@
   align-items: center;
 }
 .questions__title {
+  color: var(--clr-secondary);
   margin-top: 2em;
 }
 .questions__cards {
@@ -161,7 +170,7 @@
   transform: skewX(35deg);
   z-index: -1;
   transition: width 1s;
-  background-color: #fff;
+  background-color: var(--clr-primary);
 }
 .questions--btn:hover::before, .questions--btn:focus::before {
   width: 150%;

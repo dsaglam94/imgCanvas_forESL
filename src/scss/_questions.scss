@@ -6,6 +6,7 @@
     align-items: center;
 
     &__title {
+        color: var(--clr-secondary);
         margin-top: 2em;
     }
 
@@ -63,7 +64,7 @@
             transform: skewX(35deg);
             z-index: -1;
             transition: width 1s;
-            background-color: #fff;
+            background-color: var(--clr-primary);
         }
 
         &:hover::before,
