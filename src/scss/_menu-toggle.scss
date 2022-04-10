@@ -19,7 +19,7 @@
         }
 
         .menu-toggle {
-            margin-left: 3em;
+            margin-left: 2em;
             background-color: transparent;
             width: 40px;
             height: 30px;
@@ -71,6 +71,16 @@
                 transform: translateY(0) rotate(315deg);
                 width: 30px;
                 transition-delay: .25s;
+            }
+        }
+
+        .theme {
+            margin-left: 2em;
+            z-index: 1000;
+
+            &:hover {
+                scale: 1.2;
+                color: var(--clr-accent);
             }
         }
 }
