@@ -1,18 +1,32 @@
 // Variables for fetching question APIs
-let url = "https://would-you-rather-api.abaanshanid.repl.co/"
+let urlQuestions = "https://api.aakhilv.me/fun/wyr"
+let urlFacts = "https://api.aakhilv.me/fun/facts"
 const questionsPara = document.querySelector('.questions--para');
 const questionBtn = document.querySelector('.questions--btn');
+const factsBtn = document.querySelector('.facts--btn');
 // Questions API function block
 questionBtn.addEventListener('click',() => {
     fetchQuestions();
-})
+});
+
+factsBtn.addEventListener('click', () => {
+    fetchFacts();
+});
 
 async function fetchQuestions() {
-    const response = await fetch(url);
+    const response = await fetch(urlQuestions);
     const data = await response.json();
 
-    questionsPara.textContent = data.data;
-    console.log(data.data)
+    questionsPara.textContent = data[0];
+    console.log(data)
+}
+
+async function fetchFacts() {
+    const response = await fetch(urlFacts);
+    const data = await response.json();
+
+    questionsPara.textContent = data[0];
+    console.log(data[0]);
 }
 
 // variables for menuToggle 
