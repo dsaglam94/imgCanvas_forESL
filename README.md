@@ -2,6 +2,7 @@
 
 ## About Dawn
 
+
 I am a former teacher. The reason I started my code journey wasn't only because I love tech stuff and coding but also I wanted to create something to help my students grasp the lessons better.
 
 > I wanted to create something enjoyable yet teach the students.
@@ -12,9 +13,14 @@ Many different options exist on web that are made by other people. But they are 
 
 ## About this project
 
+I am a former teacher. The reason I started my code journey wasn't only because I love tech and coding but also I wanted to create something to help my students grasp the lessons better. 
+
+Of course, there are many different options available on the internet for this problem, but mostly seperated. Therefore I wanted to put everything I need into the same place. 
+
+
 > So this project came into life from this particular need.
 
-It has very basic interface and it is too simple.
+It has a basic interface and not complicated as it was intended. 
 
 User can :
 
@@ -32,7 +38,7 @@ User can :
 
 - [link](https://api.aakhilv.me/)
 
-## Accessibility
+## Accessibility 
 
 - The page is fully accessible by "TAB" key and can be controlled by "arrow" keys
 - Buttons have `aria-label` to explain what it does
@@ -45,10 +51,10 @@ User can :
 - SASS
 - JavaScript
 
+
 ### What's next ?
 
 As I use this project with my students, I might update or develop the project according to our needs.
 
-#### You have recommendations or feedback?
 
-Feel free to reach me and tell me your ideas.
+For any recommendations feel free to reach me!
