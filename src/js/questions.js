@@ -1,6 +1,6 @@
 // Variables for fetching question APIs
 let urlQuestions = "https://api.aakhilv.me/fun/wyr"
-let urlFacts = "https://api.aakhilv.me/fun/facts"
+let urlFacts = "https://uselessfacts.jsph.pl/random.json?language=en"
 const questionsPara = document.querySelector('.questions--para');
 const questionBtn = document.querySelector('.questions--btn');
 const factsBtn = document.querySelector('.facts--btn');
@@ -25,8 +25,8 @@ async function fetchFacts() {
     const response = await fetch(urlFacts);
     const data = await response.json();
 
-    questionsPara.textContent = data[0];
-    console.log(data[0]);
+    questionsPara.textContent = data.text;
+    console.log(data.text);
 }
 
 // variables for menuToggle 
