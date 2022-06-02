@@ -1,60 +1,29 @@
-# [Click here for the live site](https://eslcanvas.netlify.app/)
+<div align="center">
+  
+  # ESL (English as Second Language) Canvas 
+  ## [Click here](https://eslcanvas.netlify.app/) for preview
+  https://user-images.githubusercontent.com/98871279/171596905-181158d9-f0c5-4369-9f1e-c933f86ead60.mov
+  
+</div>
 
-## About Dawn
+## How it's made:
+  <strong>Tech used:</strong> HTML5, SCSS, Vanilla JavaScript
+  
+  As a former teacher, I wanted to contribute to ESL teaching field. While I was teaching online, I liked playing games with students. It made lessons fun. One of the game types that we liked the most was ESL board game. I looked at the existing websites that allow users to upload an image and draw on it but they were way more complicated than for our purpose. Also another problem was to decide team's turns. We had to open different web app for this reason to roll a die, etc.
+  
+  So this project was made as an answer to this need. We used this site with many students and it worked perfectly. Since, I made this project earlier in my career, I had to return and made some optimizations for further use.
 
+## Lessons learned:
 
-I am a former teacher. The reason I started my code journey wasn't only because I love tech stuff and coding but also I wanted to create something to help my students grasp the lessons better.
+I was using free public APIs for my questions section. At first it was working fine but then I figured that the APIs were broken. So I had to make some adjustments and changes. Also I learned to create my own API to avoid this problem and for better longevity. 
 
-> I wanted to create something enjoyable yet teach the students.
+  
+## My different projects:
 
-Especially when I have online classes with my younger students, we like playing games like board games and answering questions on the board.
+Take a look at these couple of examples that I have in my portfolio:
 
-Many different options exist on web that are made by other people. But they are either not simple enough (too many perks) or they don't have the tools we need (dice function etc.).
+<strong>Crowd Web-App:</strong> https://github.com/dsaglam94/Crowd_reactApp_deploy
 
-## About this project
+<strong>myMovie:</strong> https://github.com/dsaglam94/SCSS_Responsive_Movie_API
 
-I am a former teacher. The reason I started my code journey wasn't only because I love tech and coding but also I wanted to create something to help my students grasp the lessons better. 
-
-Of course, there are many different options available on the internet for this problem, but mostly seperated. Therefore I wanted to put everything I need into the same place. 
-
-
-> So this project came into life from this particular need.
-
-It has a basic interface and not complicated as it was intended. 
-
-User can :
-
-- upload and see the image;
-- draw on the image;
-- clear or undo the drawings;
-- roll a dice to decide the next move;
-
-> 21.04.2022 update
-
-- Added new page for random fun facts and random WYR questions
-- user can generate new questions or facts
-
-## Here are the APIs used in this project
-
-- [link](https://api.aakhilv.me/)
-
-## Accessibility 
-
-- The page is fully accessible by "TAB" key and can be controlled by "arrow" keys
-- Buttons have `aria-label` to explain what it does
-
-> Since I inteded to use this particular site for only on my desktop while having online classes, it's not responsive or suitable for mobile devices.
-
-### Tech stacks used
-
-- HTML
-- SASS
-- JavaScript
-
-
-### What's next ?
-
-As I use this project with my students, I might update or develop the project according to our needs.
-
-
-For any recommendations feel free to reach me!
+<strong>Todolist Web-App:</strong> https://github.com/dsaglam94/React_TodoList_App
