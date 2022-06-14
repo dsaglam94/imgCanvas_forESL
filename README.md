@@ -1,6 +1,6 @@
 <div align="center">
   
-  # ESL (English as Second Language) Canvas 
+  # ESL Canvas 
   ## [Click here](https://eslcanvas.netlify.app/) for preview
   https://user-images.githubusercontent.com/98871279/171596905-181158d9-f0c5-4369-9f1e-c933f86ead60.mov
   
